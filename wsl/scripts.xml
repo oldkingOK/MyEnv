@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Files>
+  <File>
+    <FileName>.\wsl\no-save-to-c.ps1</FileName>
+    <Description>将wsl系统迁移到其他位置</Description>
+  </File>
+  <File>
+    <FileName>.\wsl\test.ps1</FileName>
+    <Description>测试文件</Description>
+  </File>
+</Files>

@@ -1,1 +1,0 @@
-wsl -l --all -v
