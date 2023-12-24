@@ -6,6 +6,7 @@ echo $http_proxy
 if [ -z "$http_proxy" ]; then
     echo "环境变量 \$http_proxy 为空。请更改Windows系统代理后"
     echo "使用 wsl --shundown 和 wsl 重启 Wsl"
+    echo "如果无效，请将.wslconfig文件复制到Windows的\$USER\\下"
     exit 1
 else
     echo "环境变量 \$http_proxy 不为空。继续执行脚本。"
