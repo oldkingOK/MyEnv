@@ -28,7 +28,7 @@ echo apt 更新完成！
 
 # 安装zsh
 echo 正在安装zsh
-sudo apt install zsh git vim build-essential -y
+sudo apt install zsh git vim build-essential neofetch -y
 echo zsh安装完成！
 echo 正在配置 oh-my-zsh
 
@@ -47,7 +47,7 @@ echo "ZSH_THEME 已更改为 $new_theme"
 
 # 安装插件
 echo "正在安装插件zsh-syntax-highlighting"
-sudo apt install zsh-syntax-highlighting
+sudo apt install zsh-syntax-highlighting -y
 echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo 配置完成！按回车键退出...
 read
