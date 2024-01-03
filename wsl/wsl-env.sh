@@ -36,13 +36,19 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 chsh -s $(which zsh) $USER
 
 echo 配置完成！
-echo 主题修改为ZSH_THEME="agnoster"
+echo 主题修改为ZSH_THEME="powerlevel10k/powerlevel10k"
 echo 注意，如果字体显示错误，请安装 Powerline 字体
 # 设置新的主题
-new_theme="agnoster"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+new_theme="powerlevel10k/powerlevel10k"
 # 用 sed 命令替换 ZSH_THEME 的值
 sed -i 's/ZSH_THEME="[^\"]*"/ZSH_THEME="'"$new_theme"'"/' ~/.zshrc
 echo "ZSH_THEME 已更改为 $new_theme"
+
+# 安装插件
+echo "正在安装插件zsh-syntax-highlighting"
+sudo apt install zsh-syntax-highlighting
+echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo 配置完成！按回车键退出...
 read
 zsh
