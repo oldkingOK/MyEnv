@@ -83,6 +83,9 @@ wsl --unregister $projectName
 # 重新导入
 mkdir $newWslPath
 wsl --import $projectName $newWslPath $exportFilePath --version 2
-ubuntu config --default-user oldkingok
+Write-Host "请使用下面指令设置默认用户"
+Write-Host "<发行版代号> config --default-user <用户名>"
+Write-Host "例如："
+Write-Host "ubuntu2204 config --default-user oldkingok"
 Remove-Item $exportFilePath
 # ok
