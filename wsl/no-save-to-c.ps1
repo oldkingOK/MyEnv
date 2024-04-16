@@ -48,9 +48,10 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK) {
 
 # 创建文件选择对话框
 Write-Host "选择新wsl系统位置"
-$folderDialog = New-Object System.Windows.Forms.OpenFileDialog
-$folderDialog.Title = "选择新wsl系统位置"
+$folderDialog = New-Object System.Windows.Forms.FolderBrowserDialog
+$folderDialog.Description = "选择新wsl系统位置"
 $folderDialog.SelectedPath = [System.IO.Path]::GetFullPath("D:\")
+
 
 # 显示文件选择对话框
 $result = $folderDialog.ShowDialog()
