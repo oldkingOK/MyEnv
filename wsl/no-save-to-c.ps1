@@ -1,3 +1,7 @@
+# 如果无法执行，请用管理员权限打开powershell——右键文件夹，<Ctrl-Shift-单击【打开终端】>
+# Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+# .\no-save-to-c.ps1
+
 # 执行 wsl 命令
 Invoke-Expression "wsl -l --all -v"
 # 获取退出代码
