@@ -42,13 +42,14 @@ echo 注意，如果字体显示错误，请安装 Powerline 字体
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 new_theme="powerlevel10k/powerlevel10k"
 # 用 sed 命令替换 ZSH_THEME 的值
-sed -i 's/ZSH_THEME="[^\"]*"/ZSH_THEME="'"$new_theme"'"/' ~/.zshrc
+sed -i 's#ZSH_THEME="[^"]*"#ZSH_THEME="'"$new_theme"'"#' ~/.zshrc
 echo "ZSH_THEME 已更改为 $new_theme"
 
 # 安装插件
 echo "正在安装插件zsh-syntax-highlighting"
-sudo apt install zsh-syntax-highlighting -y
+sudo apt install zsh-syntax-highlighting zsh-autosuggestions -y
 echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+echo "source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 echo 配置完成！按回车键退出...
 read
 zsh
