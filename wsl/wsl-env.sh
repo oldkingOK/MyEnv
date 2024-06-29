@@ -28,6 +28,7 @@ echo apt 更新完成！
 
 # 安装zsh
 echo 正在安装zsh
+sudo apt install ranger -y
 sudo apt install zsh git vim build-essential neofetch -y
 echo zsh安装完成！
 echo 正在配置 oh-my-zsh
