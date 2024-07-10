@@ -38,6 +38,7 @@ chsh -s $(which zsh) $USER
 
 echo 配置完成！
 echo 主题修改为ZSH_THEME="powerlevel10k/powerlevel10k"
+# jonathan 也不错
 echo 注意，如果字体显示错误，请安装 Powerline 字体
 # 设置新的主题
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
