@@ -91,5 +91,5 @@ Write-Host "请使用下面指令设置默认用户"
 Write-Host "<发行版代号> config --default-user <用户名>"
 Write-Host "例如："
 Write-Host "ubuntu2204 config --default-user oldkingok"
-Remove-Item $exportFilePath
+# Remove-Item $exportFilePath
 # ok
